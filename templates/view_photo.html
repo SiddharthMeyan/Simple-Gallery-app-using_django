@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+{% for photo in photo_obj %}
+<center>
+<div class="container mt-3 pt-3">
+<img src="{{ photo.image.url }}" class="img-thumbnail" alt="..." style="width: 800px; height: 600px;">
+<br>
+<br>
+<h2> <b> About the Image:</b></h2>
+<br> </center> </div>
+<div class="container">
+<b>Category: <a href="{% url 'category' photo.category.id %}">   {{ photo.category}}</b></a>  
+{% comment %} photo.category.id is used as catergory is a forign key and we want to filter object that have same forign key     {% endcomment %}
+</div>
+<div class="container mt-2"> <center>
+{{photo.desc}}
+</div></center>
+{% endfor %}
+
+{% endblock body %}

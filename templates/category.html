@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block body %}
+{% for cat_photo in cat_photos %}
+
+
+<img src="{{cat_photo.image.url}}" alt="" style="width: 800px; height: 600px;">
+
+
+{% endfor %}
+{% endblock body %} 
+
