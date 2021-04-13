@@ -14,9 +14,16 @@
                             Featured
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">All</li>
+                            <li class="list-group-item">
+                            <a href={% url 'home' %}> All</a>
+                            </li>
                         {% for cat in cats %}
-                            <li class="list-group-item">{{cat.name}}</li>
+                        <li class="list-group-item">
+                        
+                        <a href="{% url 'home' %}?cat={{cat.name}}">{{cat.name}}</a>
+                        
+                         </li>
+                            
                         {% endfor %}
                             
                         </ul>
@@ -27,50 +34,7 @@
 
             <div class="col-md-9">
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="card my-2">
-                            <img src="https://images.theconversation.com/files/350865/original/file-20200803-24-50u91u.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=675.0&fit=crop"
-                                class="card-img-top" style="width: 254px; height: 145px;" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card my-2">
-                            <img src="https://thehappypuppysite.com/wp-content/uploads/2015/09/The-Siberian-Husky-HP-long.jpg"
-                                class="card-img-top" style="width: 254px; height: 145px;" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card my-2">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFGVXRlX8vw46nVOFIR6rp9VfhY0mFZvBtMI00ECTV-PC4JQlGw6SUFlUvXm1UJyecTDo&usqp=CAU"
-                                class="card-img-top" style="width: 254px; height: 145px;" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card my-2">
-                            <img src="https://i.pinimg.com/originals/a5/33/8d/a5338d44172771c83c6cf602b0e2a3a0.jpg"
-                                class="card-img-top" style="width: 254px; height: 145px;" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
+                    
                     
                     {% for img in imgs %}
                     <div class="col-md-4">
